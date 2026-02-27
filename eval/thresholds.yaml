@@ -1,0 +1,13 @@
+# Evaluation metric thresholds for CI/CD gating
+# Evaluation fails if any threshold is not met
+
+# Retrieval metrics (0.0 to 1.0)
+recall_at_5: 0.6      # At least 60% of expected anchors in top-5 results
+recall_at_10: 0.8     # At least 80% of expected anchors in top-10 results
+mrr: 0.5              # Mean Reciprocal Rank >= 0.5
+
+# Answer quality metrics (0.0 to 1.0)
+citation_coverage: 0.9    # At least 90% of answer sentences have citations
+
+# Abstain behavior (0.0 to 1.0)
+max_abstain_rate: 0.2     # No more than 20% of queries should abstain

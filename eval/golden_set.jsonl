@@ -1,0 +1,6 @@
+{"question": "What is the payment term?", "matter_id": "matter-1", "expected_docs": ["c31034dd-bd38-41da-a198-980698686f2d"], "expected_anchors": ["8"], "expected_answer_contains": ["30 days", "invoice"]}
+{"question": "Who are the parties to this agreement?", "matter_id": "matter-1", "expected_docs": ["c31034dd-bd38-41da-a198-980698686f2d"], "expected_anchors": ["4", "5"], "expected_answer_contains": ["Acme Corporation", "Widget Industries"]}
+{"question": "What are the late payment fees?", "matter_id": "matter-1", "expected_docs": ["c31034dd-bd38-41da-a198-980698686f2d"], "expected_anchors": ["10"], "expected_answer_contains": ["1.5%", "month"]}
+{"question": "What is the termination notice period?", "matter_id": "matter-1", "expected_docs": ["c31034dd-bd38-41da-a198-980698686f2d"], "expected_anchors": ["16"], "expected_answer_contains": ["30 days", "notice"]}
+{"question": "What are the warranty provisions?", "matter_id": "matter-1", "expected_docs": ["c31034dd-bd38-41da-a198-980698686f2d"], "expected_anchors": ["14"], "expected_answer_contains": ["defects", "workmanship"]}
+{"question": "What is the refund policy for early cancellation?", "matter_id": "matter-1", "expected_docs": [], "expected_anchors": [], "expected_answer_contains": []}

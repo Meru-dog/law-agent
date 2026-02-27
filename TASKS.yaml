@@ -1,0 +1,66 @@
+mvp:
+  - id: T0
+    title: Backend scaffold + tests
+    requirements: [NFR-OPS-2]
+    acceptance:
+      - FastAPI app runs locally and exposes GET /health
+      - pytest runs successfully
+      - config via env vars implemented (pydantic settings)
+      - structured logging implemented (no sensitive text)
+  - id: T1
+    title: Auth + Matter scope stubs (safe default)
+    requirements: [FR-ACL-1, FR-ACL-2, FR-ACL-4]
+    acceptance:
+      - Requests require a user identity (temporary header-based for MVP)
+      - Every query requires a matter_id
+      - Deny-by-default if matter_id not authorized
+      - Unit tests for allow/deny
+  - id: T2
+    title: Audit log persistence
+    requirements: [FR-LG-4, NFR-SEC-3]
+    acceptance:
+      - Store: user_id, matter_id, query_id, step_name, artifact_ids, timestamps
+      - No raw doc text stored
+  - id: T3
+    title: Document ingestion API + anchored extraction (minimal)
+    requirements: [FR-ING-1, FR-ING-2]
+    acceptance:
+      - Upload endpoint stores file and extracted text with anchors
+      - Return doc_id and anchor map
+      - Tests with sample docs (sanitized)
+  - id: T4
+    title: Chunking + vector index (pgvector)
+    requirements: [FR-ING-3, FR-ING-4]
+    acceptance:
+      - Chunk records stored with anchors + ACL tags
+      - Vector search returns topK chunks for a query (matter-scoped)
+  - id: T5
+    title: Answer composer with citations + abstain
+    requirements: [FR-RAG-4, FR-RAG-5, NFR-SAFE-1]
+    acceptance:
+      - Every substantive statement has citation(s) or is marked insufficient
+      - Retrieval trace returned in response
+  - id: T6
+    title: Neo4j schema + provenance
+    requirements: [FR-GRAPH-1, FR-GRAPH-2]
+    acceptance:
+      - Nodes/edges include source_doc_id + source_anchor
+      - Cypher constraints/indexes created
+  - id: T7
+    title: GraphRAG candidate retrieval
+    requirements: [FR-RAG-1, FR-RAG-2]
+    acceptance:
+      - Graph query returns candidate doc/clauses
+      - Vector search restricted to candidate set + ACL
+  - id: T8
+    title: LangGraph workflow (end-to-end)
+    requirements: [FR-LG-1, FR-LG-2, FR-LG-3]
+    acceptance:
+      - Workflow nodes implemented with checkpoints and fallbacks
+      - Audit logs created per node
+  - id: T9
+    title: Evaluation harness CLI
+    requirements: [EV-M-1, EV-M-2, EV-M-3]
+    acceptance:
+      - CLI loads golden_set and prints Recall@5/10, MRR, citation coverage
+      - Gate fails build if thresholds unmet (configurable)

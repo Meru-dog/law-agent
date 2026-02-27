@@ -1,0 +1,23 @@
+
+  # Environment variables (CRITICAL!)
+  .env
+  .env.*
+  !.env.example
+
+  # Database
+  law_rag.db
+  *.db
+  *.sqlite
+
+  # Storage
+  storage/
+
+  # Python
+  __pycache__/
+  *.pyc
+  .pytest_cache/
+
+  # IDE
+  .vscode/
+  .idea/
+
