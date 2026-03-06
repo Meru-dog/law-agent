@@ -1,134 +1,134 @@
 
-  # ========================================
-  # Python
-  # ========================================
-  __pycache__/
-  *.py[cod]
-  *$py.class
-  *.so
-  .Python
-  build/
-  develop-eggs/
-  dist/
-  downloads/
-  eggs/
-  .eggs/
-  lib/
-  lib64/
-  parts/
-  sdist/
-  var/
-  wheels/
-  *.egg-info/
-  .installed.cfg
-  *.egg
-  MANIFEST
+# ========================================
+# Python
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-  # Virtual environments
-  venv/
-  env/
-  ENV/
-  env.bak/
-  venv.bak/
-  .venv/
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
 
-  # ========================================
-  # Environment & Secrets (CRITICAL!)
-  # ========================================
-  .env
-  .env.local
-  .env.*.local
-  *.env
-  **/.env
-  backend/.env
-  backend/.env.*
+# ========================================
+# Environment & Secrets (CRITICAL!)
+# ========================================
+.env
+.env.local
+.env.*.local
+*.env
+**/.env
+backend/.env
+backend/.env.*
 
-  # API Keys and secrets
-  secrets/
-  *.secret
-  *.key
-  credentials.json
-  service-account.json
+# API Keys and secrets
+secrets/
+*.secret
+*.key
+credentials.json
+service-account.json
 
-  # ========================================
-  # Database & Storage
-  # ========================================
-  *.db
-  *.sqlite
-  *.sqlite3
-  law_rag.db
-  backend/law_rag.db
-  storage/
-  backend/storage/
+# ========================================
+# Database & Storage
+# ========================================
+*.db
+*.sqlite
+*.sqlite3
+law_rag.db
+backend/law_rag.db
+storage/
+backend/storage/
 
-  # PostgreSQL
-  *.sql
-  dump.sql
+# PostgreSQL
+*.sql
+dump.sql
 
-  # ========================================
-  # IDEs and Editors
-  # ========================================
-  .vscode/
-  .idea/
-  *.swp
-  *.swo
-  *~
-  .DS_Store
-  *.sublime-project
-  *.sublime-workspace
+# ========================================
+# IDEs and Editors
+# ========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
 
-  # ========================================
-  # Logs
-  # ========================================
-  *.log
-  logs/
-  *.log.*
+# ========================================
+# Logs
+# ========================================
+*.log
+logs/
+*.log.*
 
-  # ========================================
-  # Testing
-  # ========================================
-  .pytest_cache/
-  .coverage
-  htmlcov/
-  .tox/
-  .hypothesis/
+# ========================================
+# Testing
+# ========================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
 
-  # ========================================
-  # Docker
-  # ========================================
-  docker-compose.override.yml
-  .docker/
+# ========================================
+# Docker
+# ========================================
+docker-compose.override.yml
+.docker/
 
-  # ========================================
-  # Application Specific
-  # ========================================
-  # Uploaded documents (potentially sensitive)
-  backend/storage/documents/
-  storage/documents/
+# ========================================
+# Application Specific
+# ========================================
+# Uploaded documents (potentially sensitive)
+backend/storage/documents/
+storage/documents/
 
-  # Checkpoints (can be large)
-  *.ckpt
-  checkpoints/
+# Checkpoints (may be large)
+*.ckpt
+checkpoints/
 
-  # Evaluation results (may contain sensitive data)
-  eval/results/
-  eval/*.results.json
+# Evaluation results (may contain sensitive data)
+eval/results/
+eval/*.results.json
 
-  # ========================================
-  # OS Generated
-  # ========================================
-  .DS_Store
-  .DS_Store?
-  ._*
-  .Spotlight-V100
-  .Trashes
-  ehthumbs.db
-  Thumbs.db
+# ========================================
+# OS Generated
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-  # ========================================
-  # Temporary files
-  # ========================================
-  *.tmp
-  *.temp
-  tmp/
-  temp/
+# ========================================
+# Temporary files
+# ========================================
+*.tmp
+*.temp
+tmp/
+temp/
